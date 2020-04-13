@@ -37,6 +37,13 @@ tweets = [
     }
 ]
 
+
+
+def questiona(list_of_tweets):
+
+    print("Question A..")
+    return (list_of_tweets[0]["user"]["screen_name"])
+
 if __name__ == "__main__":
 
     print("------------------")
@@ -44,6 +51,8 @@ if __name__ == "__main__":
     print("------------------")
     print(tweets)
 
+
+    print("Hello")
     # breakpoint()
 
     #
@@ -52,9 +61,17 @@ if __name__ == "__main__":
     # "Print" the screen name of the user who authored the first tweet (i.e. "sandwhoa"):
 
 
+    print("Question A..")
+    print(tweets[0]["user"]["screen_name"])
+
     #
     # QUESTION B
     #
+
+for users in tweets:
+    if "@sandwhoa" in users["full_text"]:
+        print(users["user"]["screen_name"]) 
+
     # Of all the tweets which include the phrase "@sandwhoa" in their full text,
     # ... "print" the screen name of the user who authored that tweet,
     # ... each on a separate line (i.e. "person2", then "person3"):
